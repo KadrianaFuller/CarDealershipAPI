@@ -11,4 +11,5 @@ public interface VehiclesDao {
     Vehicle add(Vehicle vehicle);
     Vehicle update(Vehicle vehicle);
     Vehicle delete(int id);
+    Vehicle insert(Vehicle vehicle);
 }

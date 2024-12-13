@@ -13,4 +13,6 @@ public interface LeaseContractDao {
     LeaseContract  add(LeaseContract contract);
     LeaseContract update(LeaseContract contract);
     LeaseContract delete(int id);
+
+    LeaseContract insert(LeaseContract leaseContract);
 }

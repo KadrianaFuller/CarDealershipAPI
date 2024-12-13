@@ -11,5 +11,5 @@ public interface SalesContractDao {
     SalesContract add(SalesContract salesContract);
     Boolean update(SalesContract salesContract);
     SalesContract delete(int id);
-
+    SalesContract insert(SalesContract salesContract);
 }
