@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 public class SalesContractController {
+
     private SalesContractDao salesContractDao;
 
     @Autowired

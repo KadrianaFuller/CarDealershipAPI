@@ -1,15 +1,23 @@
 package com.pluralsight.dealership.CarDealershipAPI.Dao;
 
 import com.pluralsight.dealership.CarDealershipAPI.Model.SalesContract;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.sql.DataSource;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class JdbcSalesContract implements SalesContractDao{
 
     private DataSource dataSource;
     private List<SalesContract> salesContracts;
+
+    @Autowired
+    public JdbcSalesContract(DataSource dataSource){
+        this.dataSource = dataSource;
+        this.salesContracts = new ArrayList<>();
+    }
 
 
 
@@ -147,6 +155,11 @@ public class JdbcSalesContract implements SalesContractDao{
 
     @Override
     public SalesContract delete(int id) {
+        return null;
+    }
+
+    @Override
+    public SalesContract insert(SalesContract salesContract) {
         return null;
     }
 }
