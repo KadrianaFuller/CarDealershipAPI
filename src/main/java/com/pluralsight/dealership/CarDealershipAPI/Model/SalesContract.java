@@ -1,5 +1,7 @@
 package com.pluralsight.dealership.CarDealershipAPI.Model;
 
+import java.sql.Date;
+
 public class SalesContract extends Contract {
 
     private double saleTaxAmount =0.05;
@@ -14,6 +16,15 @@ public class SalesContract extends Contract {
         this.processingFee = processingFee;
         this.wantToFinance = wantToFinance;
     }
+    // Needed additonal constuctor to take it params for JDBC
+    public SalesContract(String vin, String customerName, Date saleDate, double salePrice) {
+        super(saleDate.toString(), customerName, "", null, salePrice, 0.0);
+        this.saleTaxAmount = 0.05 * salePrice; // Example: calculate tax
+        this.recordingFee = 100.00; // Example fixed fee
+        this.processingFee = 295.00; // Example fixed fee
+        this.wantToFinance = false; // Default value, can be changed later if needed
+    }
+
 
     public double getSaleTaxAmount() {
         return saleTaxAmount;

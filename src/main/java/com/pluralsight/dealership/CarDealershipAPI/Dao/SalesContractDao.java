@@ -9,7 +9,7 @@ public interface SalesContractDao {
     List<SalesContract> getAll();
     SalesContract getById(int id);
     SalesContract add(SalesContract salesContract);
-    SalesContract update(SalesContract salesContract);
+    Boolean update(SalesContract salesContract);
     SalesContract delete(int id);
 
 }
